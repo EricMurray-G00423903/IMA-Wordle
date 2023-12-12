@@ -1,0 +1,1 @@
+D:\Projects\IMA-Wordle\Wordle\Wordle\Wordle.csproj;x64

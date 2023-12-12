@@ -3,39 +3,46 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Wordle.MainPage">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+    <!-- Custom Styles for the Buttons -->
+    <ContentPage.Resources>
+        <Style x:Key="CustomButton" TargetType="Button">
+            <Setter Property="HeightRequest" Value="50"/>
+            <Setter Property="WidthRequest" Value="200"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="BackgroundColor" Value="#80000000"/>
+            <!-- Semi-transparent dark background -->
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="CornerRadius" Value="25"/>
+            <!-- Adjust as needed for rounded corners -->
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+    </ContentPage.Resources>
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+    <!-- Use Grid to allow overlaying elements -->
+    <Grid>
 
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
+        <!-- WebView as the background -->
+        <WebView x:Name="backgroundWebView"
+             Source="Resources/bg.html"
+             Opacity="0" />
 
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
+        <!-- Overlay StackLayout with buttons and label -->
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+            <!-- Welcome Message -->
+            <Label x:Name="welcomeLabel"
+               Text="Welcome to Wordle"
+               FontAttributes="Bold"
+               FontSize="30"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               TextColor="Black"
+               Opacity="1"/>
 
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
-
-        </VerticalStackLayout>
-    </ScrollView>
-
+            <!-- Buttons -->
+            <Button x:Name="newGameButton" Text="New Game" Style="{StaticResource CustomButton}" Clicked="OnNewGameClicked"/>
+            <Button x:Name="historyButton" Text="History" Style="{StaticResource CustomButton}" Clicked="OnHistoryClicked"/>
+            <Button x:Name="settingsButton" Text="Settings" Style="{StaticResource CustomButton}" Clicked="OnSettingsClicked"/>
+        </StackLayout>
+    </Grid>
 </ContentPage>
