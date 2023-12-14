@@ -53,7 +53,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiAsset Include="Resources\bg.html" />
+	  <EmbeddedResource Include="Resources\bg.html" />
 	</ItemGroup>
 
 	<ItemGroup>

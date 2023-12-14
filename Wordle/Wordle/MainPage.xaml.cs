@@ -1,6 +1,8 @@
-﻿using System.Net.Http;
+﻿using System;
+using System.Net.Http;
 using System.IO;
 using System.Threading.Tasks;
+using System.Reflection;
 
 namespace Wordle
 {
@@ -12,32 +14,36 @@ namespace Wordle
             LoadWordList();
         }
 
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            // Load or reload the HTML content when the page appears or reappears
+            wordleLabel.TextColor = AppSettings.IsDarkMode ? Color.FromHex("#FFFFFF") : Color.FromHex("#000000");
+            WebViewUtility.LoadHtmlContent(backgroundWebView, AppSettings.IsDarkMode);
+
+            // Delay to ensure UI is ready for animations
+            await Task.Delay(2000); // Adjust delay as needed
+
+            // Fade in animations
+            await welcomeLabel.FadeTo(0, 2000);
+            await Task.WhenAll(
+                wordleLabel.FadeTo(1, 500),
+                newGameButton.FadeTo(1, 500),
+                historyButton.FadeTo(1, 500),
+                settingsButton.FadeTo(1, 500),
+                backgroundWebView.FadeTo(1, 1000));
+        }
+
         private async void LoadWordList()
         {
-            // Check if word list exists
-            // If not, download it
-            
             var localFolder = FileSystem.AppDataDirectory;
             var localFilePath = Path.Combine(localFolder, "words.txt");
 
-            
             if (!File.Exists(localFilePath))
             {
                 await DownloadWordList(localFilePath);
             }
 
-            // Add a delay if you want to show the welcome message for a set time
-            await Task.Delay(2000); // e.g., 2 seconds delay
-
-            // Fade out the welcome message
-            await welcomeLabel.FadeTo(0, 1000); // Fades out the label over 1 second
-
-            // Fade in the buttons
-            await Task.WhenAll(
-                newGameButton.FadeTo(1, 500),
-                historyButton.FadeTo(1, 500),
-                settingsButton.FadeTo(1, 500),
-                backgroundWebView.FadeTo(1, 500));
         }
 
         private async Task DownloadWordList(string filePath)
@@ -71,9 +77,11 @@ namespace Wordle
             // Navigate to the History page
         }
 
-        private void OnSettingsClicked(object sender, EventArgs e)
+        private async void OnSettingsClicked(object sender, EventArgs e)
         {
-            // Navigate to the Settings page
+            // Navigate to settings
+            await Navigation.PushAsync(new SettingsPage());
+
         }
     }
 }

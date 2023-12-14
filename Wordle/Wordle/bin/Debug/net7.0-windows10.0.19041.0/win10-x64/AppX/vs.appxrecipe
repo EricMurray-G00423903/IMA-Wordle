@@ -29,29 +29,29 @@
     <AppXManifest Include="D:\Projects\IMA-Wordle\Wordle\Wordle\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-12-12T01:15:11.768</Modified>
+      <Modified>2023-12-13T23:37:07.620</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-12-12T01:04:27.878</Modified>
+      <Modified>2023-12-13T23:37:07.350</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Wordle.runtimeconfig.json">
       <PackagePath>Wordle.runtimeconfig.json</PackagePath>
-      <Modified>2023-12-11T22:55:26.088</Modified>
+      <Modified>2023-12-13T23:09:22.116</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Wordle.dll">
       <PackagePath>Wordle.dll</PackagePath>
-      <Modified>2023-12-12T01:15:10.511</Modified>
+      <Modified>2023-12-13T23:37:05.640</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Wordle.exe</PackagePath>
-      <Modified>2023-12-12T01:15:10.685</Modified>
+      <Modified>2023-12-13T23:37:05.715</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Wordle.deps.json">
       <PackagePath>Wordle.deps.json</PackagePath>
-      <Modified>2023-12-12T00:52:54.784</Modified>
+      <Modified>2023-12-13T23:09:21.986</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ericm\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.11\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -936,10 +936,6 @@
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
       <Modified>2023-11-28T10:58:54.858</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\Resources\bg.html">
-      <PackagePath>Resources\bg.html</PackagePath>
-      <Modified>2023-12-12T00:43:31.276</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
