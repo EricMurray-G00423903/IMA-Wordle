@@ -67,9 +67,10 @@ namespace Wordle
             }
         }
 
-        private void OnNewGameClicked(object sender, EventArgs e)
+        private async void OnNewGameClicked(object sender, EventArgs e)
         {
-            // Navigate to the New Game page
+            // Navigate to the New Game
+            await Navigation.PushAsync(new GamePage());
         }
 
         private void OnHistoryClicked(object sender, EventArgs e)

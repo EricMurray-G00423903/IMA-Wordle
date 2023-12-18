@@ -29,29 +29,29 @@
     <AppXManifest Include="D:\Projects\IMA-Wordle\Wordle\Wordle\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-12-13T23:37:07.620</Modified>
+      <Modified>2023-12-18T22:40:03.384</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-12-13T23:37:07.350</Modified>
+      <Modified>2023-12-18T22:40:03.149</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Wordle.runtimeconfig.json">
       <PackagePath>Wordle.runtimeconfig.json</PackagePath>
-      <Modified>2023-12-13T23:09:22.116</Modified>
+      <Modified>2023-12-18T18:26:13.862</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Wordle.dll">
       <PackagePath>Wordle.dll</PackagePath>
-      <Modified>2023-12-13T23:37:05.640</Modified>
+      <Modified>2023-12-18T22:40:01.711</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Wordle.exe</PackagePath>
-      <Modified>2023-12-13T23:37:05.715</Modified>
+      <Modified>2023-12-18T22:40:01.797</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Wordle.deps.json">
       <PackagePath>Wordle.deps.json</PackagePath>
-      <Modified>2023-12-13T23:09:21.986</Modified>
+      <Modified>2023-12-18T18:26:13.750</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ericm\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.11\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -939,23 +939,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2023-11-28T11:00:51.464</Modified>
+      <Modified>2023-12-18T18:23:06.610</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2023-11-28T11:00:51.506</Modified>
+      <Modified>2023-12-18T18:23:06.628</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2023-11-28T11:00:51.567</Modified>
+      <Modified>2023-12-18T18:23:06.652</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2023-11-28T11:00:51.640</Modified>
+      <Modified>2023-12-18T18:23:06.687</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2023-11-28T11:00:51.956</Modified>
+      <Modified>2023-12-18T18:23:06.824</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
@@ -967,211 +967,191 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2023-12-12T00:27:51.619</Modified>
+      <Modified>2023-12-18T18:23:06.871</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.912</Modified>
+      <Modified>2023-12-18T18:23:07.179</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.925</Modified>
+      <Modified>2023-12-18T18:23:07.192</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.939</Modified>
+      <Modified>2023-12-18T18:23:07.205</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.959</Modified>
+      <Modified>2023-12-18T18:23:07.226</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2023-12-12T00:27:52.027</Modified>
+      <Modified>2023-12-18T18:23:07.307</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.714</Modified>
+      <Modified>2023-12-18T18:23:06.958</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.718</Modified>
+      <Modified>2023-12-18T18:23:06.962</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.733</Modified>
+      <Modified>2023-12-18T18:23:06.977</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.722</Modified>
+      <Modified>2023-12-18T18:23:06.966</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.726</Modified>
+      <Modified>2023-12-18T18:23:06.969</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.687</Modified>
+      <Modified>2023-12-18T18:23:06.934</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.691</Modified>
+      <Modified>2023-12-18T18:23:06.938</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.711</Modified>
+      <Modified>2023-12-18T18:23:06.955</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.698</Modified>
+      <Modified>2023-12-18T18:23:06.942</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.703</Modified>
+      <Modified>2023-12-18T18:23:06.946</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.628</Modified>
+      <Modified>2023-12-18T18:23:06.885</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.633</Modified>
+      <Modified>2023-12-18T18:23:06.889</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.636</Modified>
+      <Modified>2023-12-18T18:23:06.894</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.654</Modified>
+      <Modified>2023-12-18T18:23:06.899</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.659</Modified>
+      <Modified>2023-12-18T18:23:06.905</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.663</Modified>
+      <Modified>2023-12-18T18:23:06.909</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.667</Modified>
+      <Modified>2023-12-18T18:23:06.913</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.682</Modified>
+      <Modified>2023-12-18T18:23:06.930</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.671</Modified>
+      <Modified>2023-12-18T18:23:06.917</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.674</Modified>
+      <Modified>2023-12-18T18:23:06.921</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.786</Modified>
+      <Modified>2023-12-18T18:23:07.040</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.790</Modified>
+      <Modified>2023-12-18T18:23:07.046</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.797</Modified>
+      <Modified>2023-12-18T18:23:07.057</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.806</Modified>
+      <Modified>2023-12-18T18:23:07.067</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.825</Modified>
+      <Modified>2023-12-18T18:23:07.086</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.758</Modified>
+      <Modified>2023-12-18T18:23:07.008</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.763</Modified>
+      <Modified>2023-12-18T18:23:07.013</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.767</Modified>
+      <Modified>2023-12-18T18:23:07.018</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.772</Modified>
+      <Modified>2023-12-18T18:23:07.024</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.780</Modified>
+      <Modified>2023-12-18T18:23:07.035</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.737</Modified>
+      <Modified>2023-12-18T18:23:06.981</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.741</Modified>
+      <Modified>2023-12-18T18:23:06.985</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.745</Modified>
+      <Modified>2023-12-18T18:23:06.991</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.749</Modified>
+      <Modified>2023-12-18T18:23:06.997</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.755</Modified>
+      <Modified>2023-12-18T18:23:07.004</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.832</Modified>
+      <Modified>2023-12-18T18:23:07.092</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.840</Modified>
+      <Modified>2023-12-18T18:23:07.101</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.850</Modified>
+      <Modified>2023-12-18T18:23:07.115</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.864</Modified>
+      <Modified>2023-12-18T18:23:07.131</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2023-12-12T00:27:51.901</Modified>
+      <Modified>2023-12-18T18:23:07.167</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\background.scale-100.png">
       <PackagePath>background.scale-100.png</PackagePath>
       <Modified>2023-12-12T00:22:49.694</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
-      <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2023-11-28T11:00:52.259</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
-      <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2023-11-28T11:00:52.290</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
-      <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2023-11-28T11:00:52.330</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
-      <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2023-11-28T11:00:52.380</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
-      <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2023-11-28T11:00:52.510</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
