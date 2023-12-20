@@ -15,21 +15,7 @@ public partial class WelcomePage : ContentPage
         if (!string.IsNullOrEmpty(playerName))
         {
             // Save the player's name in preferences for later use
-            Preferences.Set("playerName", playerName);
-
-            // Check if a playername.txt file exists
-            var localFolder = FileSystem.AppDataDirectory;
-            var playerFile = Path.Combine(localFolder, "playername.txt");
-
-            if (!File.Exists(playerFile))
-            {
-                // If the file doesn't exist, create it with the player's name
-                File.WriteAllText(playerFile, playerName);
-            }
-            else
-            {
-                // If the file exists, we could do something else, but for now, do nothing
-            }
+            Preferences.Set("playerName", playerName);            
 
             // Navigate to the MainPage or another appropriate page
             await Navigation.PushAsync(new MainPage());

@@ -1,4 +1,7 @@
 using System.Text;
+using System.Collections.Generic;
+using System.Text.Json;
+using System.IO;
 
 namespace Wordle;
 
@@ -7,7 +10,8 @@ public partial class GamePage : ContentPage
     private int currentRowIndex = 0;
     private int currentRowPosition = 0;
     private string currentWordToGuess;
-
+    private List<GameHistoryEntry> gameHistory = new List<GameHistoryEntry>();
+    private StringBuilder cumulativeEmojiGrid = new StringBuilder();
 
     public GamePage()
     {
@@ -33,6 +37,7 @@ public partial class GamePage : ContentPage
             }
         }
     }
+
     private async void LoadRandomWord()
     {
         await LoadRandomWordFromList();
@@ -70,7 +75,6 @@ public partial class GamePage : ContentPage
         wordGrid.BackgroundColor = Color.FromArgb("#00000000"); // Transparent background
     }
 
-
     private void InitializeAlphabetButtons()
     {
         string alphabet = "QWERTYUIOPASDFGHJKLZXCVBNM";
@@ -93,39 +97,6 @@ public partial class GamePage : ContentPage
             alphabetButtons.Children.Add(button);
         }
     }
-
-
-    private Entry GetNextEmptyEntry()
-    {
-        int currentRowIndex = GetCurrentRowIndex();
-        int startOfRow = currentRowIndex * 5; // Assuming 5 letters per row
-        int endOfRow = startOfRow + 5;
-
-        for (int i = startOfRow; i < endOfRow; i++)
-        {
-            if (wordGrid.Children[i] is Entry entry && string.IsNullOrEmpty(entry.Text))
-            {
-                return entry;
-            }
-        }
-        return null; // No empty entries in the current row
-    }
-
-    private int GetCurrentRowIndex()
-    {
-        // Assuming that each guess is one row and there are 5 entries per row
-        for (int i = 0; i < 6; i++) // Assuming 6 rows total
-        {
-            var entriesInRow = wordGrid.Children.Skip(i * 5).Take(5).OfType<Entry>();
-            if (entriesInRow.Any(entry => string.IsNullOrEmpty(entry.Text)))
-            {
-                return i; // This is the current row to be guessed
-            }
-        }
-        return -1; // This means all rows are filled, handle as per game logic
-    }
-
-
 
     private void OnLetterButtonClicked(object sender, EventArgs e)
     {
@@ -156,8 +127,6 @@ public partial class GamePage : ContentPage
         }
     }
 
-
-
     private void FocusNextEntry(Entry currentEntry)
     {
         // Find the index of the current entry
@@ -168,7 +137,6 @@ public partial class GamePage : ContentPage
             nextEntry?.Focus();
         }
     }
-
 
     private async void OnSubmitGuessClicked(object sender, EventArgs e)
     {
@@ -204,6 +172,7 @@ public partial class GamePage : ContentPage
     private async void CompareGuess(string userGuess)
     {
         bool isGuessCorrect = true;
+        int guesses = currentRowIndex + 1;
 
         for (int i = 0; i < userGuess.Length; i++)
         {
@@ -233,9 +202,12 @@ public partial class GamePage : ContentPage
             }
         }
 
+        cumulativeEmojiGrid.Append(GenerateEmojiGridString(userGuess));
+
         if (isGuessCorrect)
         {
             await ShowWinDialogAsync();
+            SaveGameToHistory(guesses, true);
         }
         else
         {
@@ -243,6 +215,7 @@ public partial class GamePage : ContentPage
             if (currentRowIndex == 5) // Assuming 6 rows indexed from 0 to 5
             {
                 await ShowLoseDialogAsync();
+                SaveGameToHistory(guesses, false);
             }
             else
             {
@@ -252,6 +225,81 @@ public partial class GamePage : ContentPage
                 ResetCurrentRow();
             }
         }
+
+        string emojiGridString = GenerateEmojiGridString(userGuess);
+
+    }
+
+    private void SaveGameToHistory(int guesses, bool isWin)
+    {
+        var historyEntry = new GameHistoryEntry(
+            DateTime.Now, // Timestamp
+            currentWordToGuess, // Correct word
+            guesses, // Number of guesses
+            cumulativeEmojiGrid.ToString() // Cumulative emoji grid string
+        );
+
+        SaveHistoryToFile(historyEntry);
+    }
+
+    private string GenerateEmojiGridString(string userGuess)
+    {
+        StringBuilder emojiGrid = new StringBuilder();
+
+        for (int i = 0; i < userGuess.Length; i++)
+        {
+            char guessLetter = userGuess[i];
+
+            // Correct letter in the correct position
+            if (currentWordToGuess[i] == guessLetter)
+            {
+                emojiGrid.Append("G"); // Green
+            }
+            // Correct letter in the wrong position
+            else if (currentWordToGuess.Contains(guessLetter))
+            {
+                emojiGrid.Append("O"); // Orange
+            }
+            // Letter not in the word to guess
+            else
+            {
+                emojiGrid.Append("W"); // Wrong
+            }
+        }
+
+        return emojiGrid.ToString();
+    }
+
+    private async void SaveHistoryToFile(GameHistoryEntry newEntry)
+    {
+        var localPath = GetHistoryFilePath();
+
+        List<GameHistoryEntry> history;
+        if (File.Exists(localPath))
+        {
+            // Read existing history
+            var json = await File.ReadAllTextAsync(localPath);
+            history = JsonSerializer.Deserialize<List<GameHistoryEntry>>(json) ?? new List<GameHistoryEntry>();
+        }
+        else
+        {
+            // No existing history
+            history = new List<GameHistoryEntry>();
+        }
+
+        // Add new entry to history
+        history.Add(newEntry);
+
+        // Write updated history to file
+        var updatedJson = JsonSerializer.Serialize(history);
+        await File.WriteAllTextAsync(localPath, updatedJson);
+    }
+
+    private string GetHistoryFilePath()
+    {
+        string playerName = Preferences.Get("playerName", string.Empty);
+        var fileName = $"{playerName}_history.json";
+        return Path.Combine(FileSystem.AppDataDirectory, fileName);
     }
 
     private async Task ShowWinDialogAsync()
@@ -268,6 +316,7 @@ public partial class GamePage : ContentPage
             GoToMainMenu();
         }
     }
+
     private async Task ShowLoseDialogAsync()
     {
         string message = $"You ran out of guesses. The word was '{currentWordToGuess}'.";
@@ -285,9 +334,9 @@ public partial class GamePage : ContentPage
 
     private void RestartGame()
     {
-        // Reset the game state and start a new game
         currentRowIndex = 0;
         currentRowPosition = 0;
+        cumulativeEmojiGrid.Clear();
         LoadRandomWord();
         ResetGameGrid();
     }
@@ -312,8 +361,6 @@ public partial class GamePage : ContentPage
         // Optionally, reset the state of the alphabet buttons
     }
 
-
-
     private async Task ShakeGridAsync()
     {
         uint timeout = 50;
@@ -323,6 +370,7 @@ public partial class GamePage : ContentPage
         await wordGrid.TranslateTo(10, 0, timeout);
         await wordGrid.TranslateTo(0, 0, timeout);
     }
+
     private void ResetCurrentRow()
     {
         for (int col = 0; col < 5; col++)
@@ -334,9 +382,8 @@ public partial class GamePage : ContentPage
                 entry.BackgroundColor = Colors.White; // Set to transparent or the original color
             }
         }
-        // Optionally, reset alphabet buttons to default state here
+        
     }
-
 
     private void OnBackspaceClicked(object sender, EventArgs e)
     {

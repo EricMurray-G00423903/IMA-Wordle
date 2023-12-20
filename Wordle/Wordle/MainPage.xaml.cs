@@ -81,9 +81,10 @@ namespace Wordle
             await Navigation.PushAsync(new GamePage());
         }
 
-        private void OnHistoryClicked(object sender, EventArgs e)
+        private async void OnHistoryClicked(object sender, EventArgs e)
         {
             // Navigate to the History page
+            await Navigation.PushAsync(new HistoryPage());
         }
 
         private async void OnSettingsClicked(object sender, EventArgs e)

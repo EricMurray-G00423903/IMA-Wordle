@@ -1,12 +1,69 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Wordle.HistoryPage"
              Title="HistoryPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <Grid>
+        <WebView x:Name="backgroundWebView"
+                 HorizontalOptions="FillAndExpand" 
+                 VerticalOptions="FillAndExpand"/>
+
+        <!-- Main Content Layout with a fixed size Frame -->
+        <VerticalStackLayout Spacing="20"
+                             Padding="30"
+                             HorizontalOptions="Fill"
+                             VerticalOptions="Center">
+
+            <Frame BackgroundColor="White" 
+                   CornerRadius="20" 
+                   Padding="15"
+                   HorizontalOptions="Fill"
+                   VerticalOptions="Start"
+                   HeightRequest="400"
+                   WidthRequest="350">
+                <!-- Fixed width for the Frame -->
+
+                <StackLayout>
+                    <!-- ListView for history entries -->
+                    <ListView x:Name="historyListView"
+                          SeparatorVisibility="None"
+                          BackgroundColor="Transparent"
+                          HeightRequest="350" 
+                          IsVisible="False">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal" Padding="10">
+                                        <Label Text="{Binding Timestamp}" FontAttributes="Bold" HorizontalOptions="StartAndExpand"/>
+                                        <Label Text="{Binding CorrectWord}" HorizontalOptions="Center"/>
+                                        <Label Text="{Binding NumberOfGuesses}" HorizontalOptions="Center"/>
+                                        <Label Text="{Binding EmojiGrid}" HorizontalOptions="End"/>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+
+                    <!-- Message for no history -->
+                    <Label x:Name="noHistoryLabel"
+                           Text="No history yet, play some games!"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           IsVisible="False" />
+                </StackLayout>
+            </Frame>
+
+            <!-- Buttons with defined style and visibility -->
+            <Button x:Name="newGameButton" 
+                    Text="New Game" 
+                    Clicked="OnNewGameClicked" 
+                    IsVisible="False" 
+                    Style="{StaticResource ButtonStyle}"
+                    WidthRequest="350"/>
+            <Button Text="Main Menu" 
+                    Clicked="OnMainMenuClicked" 
+                    Style="{StaticResource ButtonStyle}"
+                    WidthRequest="350"/>
+        </VerticalStackLayout>
+    </Grid>
 </ContentPage>
