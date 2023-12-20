@@ -8,15 +8,23 @@ namespace Wordle
 {
     public partial class MainPage : ContentPage
     {
+
+        public string PlayerName { get; set; }
+
         public MainPage()
         {
+            PlayerName = Preferences.Get("playerName", "Player");
+
             InitializeComponent();
             LoadWordList();
+
+            BindingContext = this;
         }
 
         protected override async void OnAppearing()
         {
             base.OnAppearing();
+
             // Load or reload the HTML content when the page appears or reappears
             wordleLabel.TextColor = AppSettings.IsDarkMode ? Color.FromHex("#FFFFFF") : Color.FromHex("#000000");
             WebViewUtility.LoadHtmlContent(backgroundWebView, AppSettings.IsDarkMode);

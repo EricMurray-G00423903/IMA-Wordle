@@ -16,13 +16,21 @@
 
             <!-- Dark Mode Toggle Button -->
             <Button x:Name="toggleDarkModeButton"
-                    Text="Toggle Dark Mode"
+                    Text="Toggle Theme"
+                    Style="{DynamicResource ButtonStyle}"
                     Clicked="toggleDarkModeButton_Clicked"
+                    Margin="0,10,0,10"/>
+
+            <Button x:Name="logoutButton"
+                    Text="Change Profiles"
+                    Style="{DynamicResource ButtonStyle}"
+                    Clicked="logoutButton_Clicked"
                     Margin="0,10,0,10"/>
 
             <!-- Back to Main Page Button -->
             <Button x:Name="backToMainButton"
                     Text="Back to Main"
+                    Style="{DynamicResource ButtonStyle}"
                     Clicked="backToMainButton_Clicked"
                     Margin="0,10,0,10"/>
         </StackLayout>

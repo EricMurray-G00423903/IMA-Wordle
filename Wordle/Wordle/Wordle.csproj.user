@@ -39,10 +39,10 @@
     <MauiXaml Update="Resources\Styles\Styles.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="ResultPage.xaml">
+    <MauiXaml Update="SettingsPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="SettingsPage.xaml">
+    <MauiXaml Update="WelcomePage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
   </ItemGroup>

@@ -29,13 +29,13 @@
     <AppXManifest Include="D:\Projects\IMA-Wordle\Wordle\Wordle\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-12-18T22:40:03.384</Modified>
+      <Modified>2023-12-19T23:53:25.646</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-12-18T22:40:03.149</Modified>
+      <Modified>2023-12-19T23:51:41.355</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Wordle.runtimeconfig.json">
       <PackagePath>Wordle.runtimeconfig.json</PackagePath>
@@ -43,15 +43,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Wordle.dll">
       <PackagePath>Wordle.dll</PackagePath>
-      <Modified>2023-12-18T22:40:01.711</Modified>
+      <Modified>2023-12-19T23:53:23.453</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Wordle.exe</PackagePath>
-      <Modified>2023-12-18T22:40:01.797</Modified>
+      <Modified>2023-12-19T23:53:23.578</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\IMA-Wordle\Wordle\Wordle\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Wordle.deps.json">
       <PackagePath>Wordle.deps.json</PackagePath>
-      <Modified>2023-12-18T18:26:13.750</Modified>
+      <Modified>2023-12-19T23:37:08.112</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ericm\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.11\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>

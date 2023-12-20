@@ -24,7 +24,7 @@
                Opacity="0"/>
             <!-- Welcome Message -->
             <Label x:Name="welcomeLabel"
-               Text="Welcome to Wordle"
+               Text="{Binding PlayerName, StringFormat='Welcome to Wordle, {0}'}"
                FontAttributes="Bold"
                FontSize="30"
                HorizontalTextAlignment="Center"
@@ -32,10 +32,11 @@
                TextColor="Black"
                Opacity="1"/>
 
+
             <!-- Buttons -->
-            <Button x:Name="newGameButton" Text="New Game" Opacity="0" Clicked="OnNewGameClicked" Margin="0,10,0,10"/>
-            <Button x:Name="historyButton" Text="History" Opacity="0" Clicked="OnHistoryClicked" Margin="0,10,0,10"/>
-            <Button x:Name="settingsButton" Text="Settings" Opacity="0" Clicked="OnSettingsClicked" Margin="0,10,0,10"/>
+            <Button x:Name="newGameButton" Style="{DynamicResource ButtonStyle}" Text="New Game" Opacity="0" Clicked="OnNewGameClicked" Margin="0,10,0,10"/>
+            <Button x:Name="historyButton" Style="{DynamicResource ButtonStyle}" Text="History" Opacity="0" Clicked="OnHistoryClicked" Margin="0,10,0,10"/>
+            <Button x:Name="settingsButton" Style="{DynamicResource ButtonStyle}" Text="Settings" Opacity="0" Clicked="OnSettingsClicked" Margin="0,10,0,10"/>
         </StackLayout>
     </Grid>
 </ContentPage>

@@ -49,8 +49,8 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Button x:Name="submitGuessButton" Text="Submit" Grid.Column="0" Clicked="OnSubmitGuessClicked"/>
-                <Button x:Name="backspaceButton" Text="Backspace" Grid.Column="1" Clicked="OnBackspaceClicked"/>
+                <Button x:Name="submitGuessButton" Style="{DynamicResource ButtonStyle}" Text="Submit" Grid.Column="0" Clicked="OnSubmitGuessClicked"/>
+                <Button x:Name="backspaceButton" Style="{DynamicResource ButtonStyle}" Text="Backspace" Grid.Column="1" Clicked="OnBackspaceClicked"/>
             </Grid>
 
 

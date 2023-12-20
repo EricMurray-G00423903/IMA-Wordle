@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Wordle.WelcomePage"
+             Title="WelcomePage"
+             BackgroundColor="#C6E3FF">
+    <!-- Soft grayish-blue background -->
+    <VerticalStackLayout 
+        Spacing="25"
+        Padding="30"
+        VerticalOptions="Center"
+        HorizontalOptions="CenterAndExpand">
+
+        <!-- Frame with a set width and height for better mobile appearance -->
+        <Frame 
+            BackgroundColor="White"
+            CornerRadius="20"
+            Padding="20"
+            WidthRequest="350"
+            HeightRequest="200"
+            HorizontalOptions="Center"
+            VerticalOptions="CenterAndExpand">
+
+            <!-- Welcome Label and Entry inside a StackLayout -->
+            <StackLayout 
+                Spacing="15">
+                <Label 
+                    Text="Who's Playing?"
+                    FontSize="Medium"
+                    HorizontalOptions="Center" 
+                    HorizontalTextAlignment="Center" />
+                <Entry 
+                    x:Name="playerNameEntry"
+                    Placeholder="Enter your name"
+                    Margin="0,0,0,10"
+                    HorizontalOptions="FillAndExpand" />
+                <Button 
+                    x:Name="playButton"
+                    Text="Play"
+                    Style="{DynamicResource ButtonStyle}"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="OnPlayButtonClicked" />
+            </StackLayout>
+
+        </Frame>
+    </VerticalStackLayout>
+</ContentPage>

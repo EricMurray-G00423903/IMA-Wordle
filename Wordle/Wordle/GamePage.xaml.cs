@@ -54,7 +54,7 @@ public partial class GamePage : ContentPage
                     VerticalTextAlignment = TextAlignment.Center,
                     Margin = new Thickness(5),
                     FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Entry)),
-                    BackgroundColor = Color.FromArgb("#FFFFFF") // Assuming you want a white background for the entry
+                    BackgroundColor = Color.FromArgb("#FFFFFF") // white background for the entry
                 };
 
                 // Set the row and column for each entry
@@ -82,10 +82,18 @@ public partial class GamePage : ContentPage
                 WidthRequest = 40,
                 HeightRequest = 40
             };
+
+            // Set the style dynamically
+            if (Application.Current.Resources.TryGetValue("ButtonStyle", out var buttonStyle))
+            {
+                button.Style = (Style)buttonStyle;
+            }
+
             button.Clicked += OnLetterButtonClicked;
             alphabetButtons.Children.Add(button);
         }
     }
+
 
     private Entry GetNextEmptyEntry()
     {

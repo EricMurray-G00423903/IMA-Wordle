@@ -52,14 +52,14 @@ build_metadata.AdditionalFiles.ManifestResourceName = Wordle.Resources.Styles.St
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[D:/Projects/IMA-Wordle/Wordle/Wordle/ResultPage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = Wordle.ResultPage.xaml
-build_metadata.AdditionalFiles.TargetPath = ResultPage.xaml
-build_metadata.AdditionalFiles.RelativePath = ResultPage.xaml
-
 [D:/Projects/IMA-Wordle/Wordle/Wordle/SettingsPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Wordle.SettingsPage.xaml
 build_metadata.AdditionalFiles.TargetPath = SettingsPage.xaml
 build_metadata.AdditionalFiles.RelativePath = SettingsPage.xaml
+
+[D:/Projects/IMA-Wordle/Wordle/Wordle/WelcomePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Wordle.WelcomePage.xaml
+build_metadata.AdditionalFiles.TargetPath = WelcomePage.xaml
+build_metadata.AdditionalFiles.RelativePath = WelcomePage.xaml
