@@ -9,7 +9,7 @@
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
-
+            <local:EmojiGridConverter x:Key="EmojiGridConverter" />
             <!-- Define your Light and Dark Theme Styles here -->
             <Style x:Key="LightThemeButton" TargetType="Button">
                 <Setter Property="BackgroundColor" Value="#E0E0E0"/>

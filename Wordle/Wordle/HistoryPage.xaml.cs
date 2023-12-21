@@ -32,7 +32,7 @@ public partial class HistoryPage : ContentPage
                 historyListView.ItemsSource = history;
                 historyListView.IsVisible = true;
                 noHistoryLabel.IsVisible = false;
-                newGameButton.IsVisible = true; // Or false, depending on your design
+                newGameButton.IsVisible = false;
             }
             else
             {

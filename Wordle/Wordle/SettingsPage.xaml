@@ -27,7 +27,12 @@
                     Clicked="logoutButton_Clicked"
                     Margin="0,10,0,10"/>
 
-            <!-- Back to Main Page Button -->
+            <Button x:Name="clearHistoryButton"
+                    Text="Clear History"
+                    Style="{DynamicResource ButtonStyle}"
+                    Clicked="clearHistoryButton_Clicked"
+                    Margin="0,10,0,10"/>
+
             <Button x:Name="backToMainButton"
                     Text="Back to Main"
                     Style="{DynamicResource ButtonStyle}"
