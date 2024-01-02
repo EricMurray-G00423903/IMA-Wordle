@@ -18,6 +18,7 @@ namespace Wordle
 
         private string ConvertEmojiGridStringToEmoji(string emojiGridString)
         {
+            // use a string builder to build the emoji grid like the one on real wordle 5 emojis per line
             StringBuilder emojiGrid = new StringBuilder();
             for (int i = 0; i < emojiGridString.Length; i++)
             {
@@ -32,6 +33,7 @@ namespace Wordle
 
         private string GetEmojiForChar(char c)
         {
+            //translates the file, structured storage into appropriate emojis
             return c switch
             {
                 'G' => "🟩", // Green square emoji
@@ -41,6 +43,7 @@ namespace Wordle
             };
         }
 
+        //convert back not really needed but added for visibility
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
             throw new NotImplementedException();

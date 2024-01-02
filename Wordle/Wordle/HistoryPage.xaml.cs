@@ -13,7 +13,7 @@ public partial class HistoryPage : ContentPage
     protected override async void OnAppearing()
     {
         base.OnAppearing();
-        await LoadHistory();
+        await LoadHistory(); //load history on appearing await function
     }
 
     private async Task LoadHistory()
@@ -25,7 +25,7 @@ public partial class HistoryPage : ContentPage
         if (File.Exists(localPath))
         {
             var json = await File.ReadAllTextAsync(localPath);
-            var history = JsonSerializer.Deserialize<List<GameHistoryEntry>>(json);
+            var history = JsonSerializer.Deserialize<List<GameHistoryEntry>>(json); //uses json to deserialise data for display
 
             if (history != null && history.Count > 0)
             {
@@ -49,7 +49,7 @@ public partial class HistoryPage : ContentPage
         }
     }
 
-
+    //navigation buttons
     private async void OnNewGameClicked(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new GamePage());

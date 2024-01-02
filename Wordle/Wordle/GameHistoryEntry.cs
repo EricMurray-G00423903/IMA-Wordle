@@ -8,6 +8,7 @@ namespace Wordle
 {
     public class GameHistoryEntry
     {
+        //custom class for serialising the game history to be written to a users history json file
         public DateTime Timestamp { get; set; }
         public string CorrectWord { get; set; }
         public int NumberOfGuesses { get; set; }

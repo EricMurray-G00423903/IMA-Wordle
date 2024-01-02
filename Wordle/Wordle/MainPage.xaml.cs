@@ -42,7 +42,7 @@ namespace Wordle
                 backgroundWebView.FadeTo(1, 1000));
         }
 
-        private async void LoadWordList()
+        private async void LoadWordList() 
         {
             var localFolder = FileSystem.AppDataDirectory;
             var localFilePath = Path.Combine(localFolder, "words.txt");
@@ -58,7 +58,7 @@ namespace Wordle
         {
             var client = new HttpClient();
             var wordsUrl = "https://raw.githubusercontent.com/DonH-ITS/jsonfiles/main/words.txt";
-
+            //download words.txt
             try
             {
                 var response = await client.GetAsync(wordsUrl);

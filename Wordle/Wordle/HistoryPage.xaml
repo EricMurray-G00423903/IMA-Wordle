@@ -90,7 +90,6 @@
                             Style="{StaticResource ButtonStyle}"/>
                 </StackLayout>
             </StackLayout>
-            <!-- This StackLayout wraps all the contents of the Frame -->
 
         </Frame>
     </Grid>

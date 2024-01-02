@@ -28,6 +28,7 @@ public partial class SettingsPage : ContentPage
 
     private void logoutButton_Clicked(object sender, EventArgs e)
     {
+        //reset playername and go back to welcome page to 'change profiles' purely for history and bound data
         Preferences.Set("playername", "");
         Navigation.PushAsync(new WelcomePage());
     }

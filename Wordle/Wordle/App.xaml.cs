@@ -12,6 +12,7 @@
 
         public static void SetTheme(bool isDark)
         {
+            // set buttons to appropriate style based on theme
             if (isDark)
             {
                 Current.Resources["ButtonStyle"] = Current.Resources["DarkThemeButton"];

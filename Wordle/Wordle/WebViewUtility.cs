@@ -9,6 +9,7 @@ namespace Wordle
 {
     public static class WebViewUtility
     {
+        //simple class for changing the colors on the webview background for dark/light mode
         public static void LoadHtmlContent(WebView webView, bool isDarkMode)
         {
             var assembly = IntrospectionExtensions.GetTypeInfo(typeof(MainPage)).Assembly;

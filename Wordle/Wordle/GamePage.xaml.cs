@@ -15,6 +15,7 @@ public partial class GamePage : ContentPage
 
     public GamePage()
     {
+        //run initialising functions to start each game
         InitializeComponent();
         InitializeGameGrid();
         InitializeAlphabetButtons();
@@ -24,6 +25,7 @@ public partial class GamePage : ContentPage
 
     private async Task LoadRandomWordFromList()
     {
+        //read in the words.txt and add the current word to guess to a variable for comparison
         var localFolder = FileSystem.AppDataDirectory;
         var localFilePath = Path.Combine(localFolder, "words.txt");
 
@@ -60,7 +62,7 @@ public partial class GamePage : ContentPage
                     Margin = new Thickness(5),
                     FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Entry)),
                     BackgroundColor = Color.FromArgb("#FFFFFF"), // white background for the entry
-                    IsReadOnly = true // This will prevent the keyboard from popping up
+                    IsReadOnly = true // This will prevent the keyboard from popping up on mobile
                 };
 
                 // Disable focus for the entry
@@ -81,6 +83,7 @@ public partial class GamePage : ContentPage
 
     private void InitializeAlphabetButtons()
     {
+        //create the alphabet buttons runtime
         string alphabet = "QWERTYUIOPASDFGHJKLZXCVBNM";
         foreach (char letter in alphabet)
         {
@@ -116,18 +119,11 @@ public partial class GamePage : ContentPage
                 entry.Text = button.Text;
                 currentRowPosition++; // Move to the next position
 
-                // Optionally focus on the next Entry if not at the end of the row
                 if (currentRowPosition < 5)
                 {
                     FocusNextEntry(entry);
                 }
             }
-        }
-        // If the row is complete, you could automatically invoke the submit action or alert the user
-        else
-        {
-            // Invoke submit or show an alert
-            // OnSubmitGuessClicked(null, null); // Uncomment to auto-submit
         }
     }
 
@@ -175,6 +171,7 @@ public partial class GamePage : ContentPage
 
     private async void CompareGuess(string userGuess)
     {
+        // BUGGED CODE, CANNOT CHANGE BGCOLOR OF ENTRY ON CURRENT VS REQUIRES A BIG UPDATE TO FIX CHECKED FORUMS (ANDROID ONLY WORKS PERFECT ON WINDOWS)
         bool isGuessCorrect = true;
         int guesses = currentRowIndex + 1;
 
@@ -348,7 +345,6 @@ public partial class GamePage : ContentPage
     private void GoToMainMenu()
     {
         // Navigate back to the main menu
-        // Assuming you have a navigation mechanism to go back to the main menu
         Navigation.PopAsync();
     }
 
@@ -362,7 +358,6 @@ public partial class GamePage : ContentPage
                 entry.BackgroundColor = Colors.White;
             }
         }
-        // Optionally, reset the state of the alphabet buttons
     }
 
     private async Task ShakeGridAsync()

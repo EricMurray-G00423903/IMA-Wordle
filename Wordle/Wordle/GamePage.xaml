@@ -39,7 +39,7 @@
                     AlignItems="Start" AlignContent="Start"
                     Basis="Auto" Grow="1" Shrink="1"
                     HorizontalOptions="Center" VerticalOptions="Start">
-                <!-- Dynamically add alphabet buttons here -->
+
             </FlexLayout>
 
 

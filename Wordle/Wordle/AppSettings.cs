@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Wordle
 {
+    //custom class for handling updating theme when switching between pages
     public static class AppSettings
     {
         private const string DarkModeKey = "IsDarkMode";
