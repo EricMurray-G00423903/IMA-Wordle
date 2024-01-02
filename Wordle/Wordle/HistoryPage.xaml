@@ -7,96 +7,91 @@
                  HorizontalOptions="FillAndExpand" 
                  VerticalOptions="FillAndExpand"/>
 
-        <!-- Main Content Layout with a fixed size Frame -->
-        <VerticalStackLayout Spacing="20"
-                             Padding="30"
-                             HorizontalOptions="Fill"
-                             VerticalOptions="Center">
+        <!-- Main Content Layout -->
+        <Frame BackgroundColor="White" 
+               CornerRadius="20" 
+               Padding="15"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="FillAndExpand">
 
-            <Frame BackgroundColor="White" 
-                   CornerRadius="20" 
-                   Padding="15"
-                   HorizontalOptions="Fill"
-                   VerticalOptions="Start"
-                   HeightRequest="400"
-                   WidthRequest="600">
-                <!-- Fixed width for the Frame -->
+            <StackLayout>
+                <ScrollView>
+                    <!-- ScrollView allows the content to scroll if it exceeds the screen size -->
+                    <StackLayout>
+                        <!-- ListView for history entries -->
+                        <ListView x:Name="historyListView"
+                                  SeparatorVisibility="None"
+                                  BackgroundColor="Transparent"
+                                  IsVisible="False">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <StackLayout Orientation="Vertical" Padding="10">
+                                            <!-- Grid for arranging timestamp, correct word, and guesses -->
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                </Grid.ColumnDefinitions>
 
-                <StackLayout>
-                    <!-- ListView for history entries -->
-                    <ListView x:Name="historyListView"
-                              SeparatorVisibility="None"
-                              BackgroundColor="Transparent"
-                              HeightRequest="350" 
-                              IsVisible="False">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <ViewCell>
-                                    <StackLayout Orientation="Vertical" Padding="10">
-                                        <!-- Grid for arranging timestamp, correct word, and guesses -->
-                                        <Grid>
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="Auto"/>
-                                                <ColumnDefinition Width="*"/>
-                                                <ColumnDefinition Width="Auto"/>
-                                            </Grid.ColumnDefinitions>
+                                                <!-- Timestamp -->
+                                                <Label Grid.Column="0"
+                                                       Text="{Binding Timestamp, StringFormat='{0:dd/MM | hh:mmtt}'}" 
+                                                       FontAttributes="Bold" 
+                                                       HorizontalOptions="Start" 
+                                                       VerticalTextAlignment="Center"/>
 
-                                            <!-- Timestamp -->
-                                            <Label Grid.Column="0"
-                                                   Text="{Binding Timestamp, StringFormat='{0:dd/MM | hh:mmtt}'}" 
-                                                   FontAttributes="Bold" 
-                                                   HorizontalOptions="Start" 
-                                                   VerticalTextAlignment="Center"/>
+                                                <!-- Correct Word and Guesses Centered -->
+                                                <StackLayout Grid.Column="1" 
+                                                             Orientation="Horizontal" 
+                                                             HorizontalOptions="Center" 
+                                                             Spacing="5">
+                                                    <Label Text="Correct Word:" HorizontalOptions="End" VerticalOptions="Center"/>
+                                                    <Label Text="{Binding CorrectWord}" FontAttributes="Bold" HorizontalOptions="Start" VerticalOptions="Center"/>
+                                                </StackLayout>
 
-                                            <!-- Correct Word and Guesses Centered -->
-                                            <StackLayout Grid.Column="1" 
-                                                 Orientation="Horizontal" 
-                                                 HorizontalOptions="Center" 
-                                                 Spacing="5">
-                                                <Label Text="Correct Word:" HorizontalOptions="End" VerticalOptions="Center"/>
-                                                <Label Text="{Binding CorrectWord}" FontAttributes="Bold" HorizontalOptions="Start" VerticalOptions="Center"/>
-                                            </StackLayout>
+                                                <!-- Guesses -->
+                                                <Label Grid.Column="2"
+                                                       Text="{Binding NumberOfGuesses, StringFormat='Guesses: {0}/6'}" 
+                                                       HorizontalOptions="End" 
+                                                       VerticalTextAlignment="Center"/>
+                                            </Grid>
 
-                                            <!-- Guesses -->
-                                            <Label Grid.Column="2"
-                                                   Text="{Binding NumberOfGuesses, StringFormat='Guesses: {0}/6'}" 
-                                                   HorizontalOptions="End" 
-                                                   VerticalTextAlignment="Center"/>
-                                        </Grid>
-
-                                        <!-- Emoji representation of the grid -->
-                                        <Label Text="{Binding EmojiGrid, Converter={StaticResource EmojiGridConverter}}" 
+                                            <!-- Emoji representation of the grid -->
+                                            <Label Text="{Binding EmojiGrid, Converter={StaticResource EmojiGridConverter}}" 
                                                    HorizontalOptions="Center"/>
-                                    </StackLayout>
-                                </ViewCell>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
+                                        </StackLayout>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
 
+                        <!-- Message for no history -->
+                        <Label x:Name="noHistoryLabel"
+                               Text="No history yet, play some games!"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               IsVisible="False" />
+                    </StackLayout>
+                </ScrollView>
 
-
-
-
-                    <!-- Message for no history -->
-                    <Label x:Name="noHistoryLabel"
-                           Text="No history yet, play some games!"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Center"
-                           IsVisible="False" />
+                <!-- Buttons with defined style and visibility -->
+                <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="Center"
+                             Spacing="15">
+                    <Button x:Name="newGameButton" 
+                            Text="New Game" 
+                            Clicked="OnNewGameClicked" 
+                            IsVisible="False" 
+                            Style="{StaticResource ButtonStyle}"/>
+                    <Button Text="Main Menu" 
+                            Clicked="OnMainMenuClicked" 
+                            Style="{StaticResource ButtonStyle}"/>
                 </StackLayout>
-            </Frame>
+            </StackLayout>
+            <!-- This StackLayout wraps all the contents of the Frame -->
 
-            <!-- Buttons with defined style and visibility -->
-            <Button x:Name="newGameButton" 
-                    Text="New Game" 
-                    Clicked="OnNewGameClicked" 
-                    IsVisible="False" 
-                    Style="{StaticResource ButtonStyle}"
-                    WidthRequest="350"/>
-            <Button Text="Main Menu" 
-                    Clicked="OnMainMenuClicked" 
-                    Style="{StaticResource ButtonStyle}"
-                    WidthRequest="350"/>
-        </VerticalStackLayout>
+        </Frame>
     </Grid>
 </ContentPage>
