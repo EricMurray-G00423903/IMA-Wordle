@@ -59,8 +59,12 @@ public partial class GamePage : ContentPage
                     VerticalTextAlignment = TextAlignment.Center,
                     Margin = new Thickness(5),
                     FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Entry)),
-                    BackgroundColor = Color.FromArgb("#FFFFFF") // white background for the entry
+                    BackgroundColor = Color.FromArgb("#FFFFFF"), // white background for the entry
+                    IsReadOnly = true // This will prevent the keyboard from popping up
                 };
+
+                // Disable focus for the entry
+                entry.Focused += (sender, args) => ((Entry)sender).Unfocus();
 
                 // Set the row and column for each entry
                 Grid.SetRow(entry, row);
